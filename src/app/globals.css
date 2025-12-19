@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #7a61f5;
+  --color-primary-dark: #352d62;
+  --color-primary-light: #f0eef7;
+  --color-secondary: #f71068;
+  --color-green: #48ad6ecc;
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-white text-primary-dark antialiased;
+  font-family: "Public Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  button {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    @apply text-[44px] font-bold leading-[1.05] text-primary-dark md:text-[63px];
+}
+
+  h2 {
+    @apply text-[36px] font-bold leading-tight text-primary-dark md:text-[44px];
+  }
+
+  h3 {
+    @apply text-[32px] font-semibold leading-tight text-primary-dark md:text-[40px];
+  }
+
+  h4 {
+    @apply text-[28px] font-semibold text-primary-dark md:text-[32px];
+  }
+
+  h5 {
+    @apply text-[24px] font-semibold text-primary-dark md:text-[28px];
+  }
+
+  h6 {
+    @apply text-[18px] font-semibold text-primary-dark md:text-[20px];
+  }
+
+  h1 span,
+  h2 span,
+  h3 span,
+  h4 span,
+  h5 span,
+  h6 span {
+    @apply font-normal;
+  }
+
+  p {
+    @apply text-[16px] font-normal leading-relaxed text-primary-dark;
+  }
+
+  a {
+    @apply text-primary font-semibold no-underline;
+  }
+
+  button {
+    @apply font-semibold;
+  }
+}
+
+@layer components {
+  .section {
+    @apply my-[60px];
+  }
+
+  main > section:last-child {
+    @apply mb-0;
+  }
+
+  main > section.cta-last:last-child {
+    @apply mb-[100px];
+  }
+
+  .container-wide {
+    @apply container;
+  }
+
+  .card {
+    @apply rounded-md bg-white shadow-sm ring-1 ring-black/5;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
